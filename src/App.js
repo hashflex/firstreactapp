@@ -71,7 +71,7 @@ class App extends Component {
         <div>
           {
             this.state.persons.map(
-              (person, index) => {
+              (person, index) => { // for each person below element will be rendered
                 return (
                   <Person name={person.name}
                           age={person.age}
@@ -79,8 +79,7 @@ class App extends Component {
                           key={person.id}
                           changeEventHandler={(event) => this.nameChangeHandler(event, person.id)}
                   />
-                );
-                /*end of esx*/
+                ); /*end of esx*/
               }) /*end of map*/
           }
         </div>
