@@ -3,6 +3,7 @@ import logo from './logo.svg'
 import './App.css';
 import Person from './Person/Person';
 import {Button} from 'reactstrap';
+import Radium from 'radium';
 
 class App extends Component {
 
@@ -109,4 +110,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Radium(App);
