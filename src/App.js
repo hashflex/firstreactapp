@@ -65,8 +65,11 @@ class App extends Component {
   render() {
 
     let persons = null;
-
+    let toggleButtonClassName = 'danger';
+    let toggleButtonText = 'Show Persons';
     if (this.state.showPersons) {
+      toggleButtonClassName = 'primary';
+      toggleButtonText = 'Hide Persons';
       persons = (
         <div>
           {
@@ -98,7 +101,7 @@ class App extends Component {
         <div className="PersonContainer">
           <Button color="primary" onClick={this.switchNameHandler}>Update</Button>
           &nbsp;
-          <Button color="danger" onClick={this.togglePersons}>Danger!</Button>
+          <Button color={toggleButtonClassName} onClick={this.togglePersons}>{toggleButtonText}</Button>
           {persons}
         </div>
       </div>
